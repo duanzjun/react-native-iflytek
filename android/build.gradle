@@ -37,7 +37,7 @@ dependencies {
 
     api files('libs/Msc.jar')
     api files('libs/Sunflower.jar')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     implementation "com.facebook.react:react-native:+"
