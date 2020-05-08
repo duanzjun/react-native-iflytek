@@ -10,9 +10,11 @@
 #define MSC_IFlyMSC_h
 
 #import "IFlyAudioSession.h"
-#import "IFlyContact.h"
 #import "IFlyDataUploader.h"
 #import "IFlyDebugLog.h"
+#import "IFlyIdentityVerifier.h"
+#import "IFlyIdentityResult.h"
+#import "IFlyIdentityVerifierDelegate.h"
 #import "IFlyISVDelegate.h"
 #import "IFlyISVRecognizer.h"
 #import "IFlyRecognizerView.h"
@@ -31,9 +33,8 @@
 #import "IFlySpeechUtility.h"
 #import "IFlyUserWords.h"
 #import "IFlyPcmRecorder.h"
+#import "IFlyVerifierUtil.h"
 #import "IFlyVoiceWakeuper.h"
 #import "IFlyVoiceWakeuperDelegate.h"
-
-
 
 #endif
