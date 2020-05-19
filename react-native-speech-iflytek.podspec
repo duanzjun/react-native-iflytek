@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.preserve_paths = 'README.md', 'package.json', 'index.js'
   s.vendored_frameworks = "**/iflyMSC.framework"
   s.source_files   = 'ios/RNSpeechIFlytek/*.{h,m}'
-  s.frameworks = "AVFoundation", "SystemConfiguration", "Foundation", "CoreTelephony", "AddressBook"
+  s.frameworks = "AVFoundation", "SystemConfiguration", "Foundation", "CoreTelephony", "AudioToolbox","CoreLocation","Contacts","AddressBook","QuartzCore","CoreGraphics"
   s.library = "z"
 
   s.dependency 'React'
