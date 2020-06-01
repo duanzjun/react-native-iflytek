@@ -10,7 +10,7 @@ react-native-speech-iflytek 是一个 React Native 下的科大讯飞语音库�
 ## Install
 ```
 yarn add react-native-speech-iflytek
-react-native link
+
 ```
 安装、链接后还须进行下面两步（以 `Example` 工程为例）：
 1. 在 [讯飞开放平台](http://www.xfyun.cn/sdk/dispatcher) 下载组合服务 SDK （选择`语音听写`与`在线语音合成`），分别下载 Android 与 iOS 平台 SDK。
