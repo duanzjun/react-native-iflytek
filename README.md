@@ -1,26 +1,25 @@
-# react-native-speech-iflytek &middot;  [![npm](https://img.shields.io/npm/v/react-native-speech-iflytek.svg)](https://www.npmjs.com/package/react-native-speech-iflytek) [![npm](https://img.shields.io/npm/dm/react-native-speech-iflytek.svg)](https://www.npmjs.com/package/react-native-speech-iflytek) [![GitHub closed issues](https://img.shields.io/github/issues-closed/zphhhhh/react-native-speech-iflytek.svg)](https://github.com/zphhhhh/react-native-speech-iflytek/issues?q=is%3Aissue+is%3Aclosed)
-react-native-speech-iflytek 是一个 React Native 下的科大讯飞语音库，可以进行语音识别与语音合成。
-
+# react-native-iflytek &middot;  [![npm](https://img.shields.io/npm/v/react-native-iflytek.svg)](https://www.npmjs.com/package/react-native-iflytek) [![npm](https://img.shields.io/npm/dm/react-native-iflytek.svg)](https://www.npmjs.com/package/react-native-iflytek) [![GitHub closed issues](https://img.shields.io/github/issues-closed/duanzjun/react-native-iflytek.svg)](https://github.com/duanzjun/react-native-iflytek/issues?q=is%3Aissue+is%3Aclosed)
+react-native-iflytek 是一个 React Native 下的科大讯飞语音库，可以进行语音识别与语音合成。
+此库来源于https://github.com/zphhhhh/react-native-speech-iflytek，在这基础上进行升级，测试在react-native 0.60及以上版本Android和Ios可用
 ## Support
-- React Native >= 0.47.0 from 0.2.0
-- React Native >= 0.42.0 from 0.1.2
+- React Native >= 0.60.0 from 0.2.0
 - Android
 - iOS from 1.0.0
 
 ## Install
 ```
-yarn add react-native-speech-iflytek
+yarn add react-native-iflytek
 
 ```
 安装、链接后还须进行下面两步（以 `Example` 工程为例）：
 1. 在 [讯飞开放平台](http://www.xfyun.cn/sdk/dispatcher) 下载组合服务 SDK （选择`语音听写`与`在线语音合成`），分别下载 Android 与 iOS 平台 SDK。
 2. 替换 SDK 文件：
-    1. 使用下载 Android SDK 的 `Android_voice_xxxx_xxxxxxxx/libs` 文件夹替换 `Example/node_modules/react-native-speech-iflytek/android/libs` 文件夹；
-    2. 使用下载 iOS SDK 的 `iOS_voice_xxxx_xxxxxxxx/libs` 文件夹替换 `Example/node_modules/react-native-speech-iflytek/ios/libs` 文件夹。
+    1. 使用下载 Android SDK 的 `Android_voice_xxxx_xxxxxxxx/libs` 文件夹替换 `Example/node_modules/react-native-iflytek/android/libs` 文件夹；
+    2. 使用下载 iOS SDK 的 `iOS_voice_xxxx_xxxxxxxx/libs` 文件夹替换 `Example/node_modules/react-native-iflytek/ios/libs` 文件夹。
     
 3. iOS 平台还需手动添加部分依赖库：
     1. 在 XCode 中打开 `Example/ios/YourProject.xcodeproj`；
-    2. 将讯飞框架文件 `Example/node_modules/react-native-speech-iflytek/ios/libs/iflyMSC.framework` 拖入 Project navigator 的 `Frameworks` 下，注意选择 `Copy items if needed`；
+    2. 将讯飞框架文件 `Example/node_modules/react-native-iflytek/ios/libs/iflyMSC.framework` 拖入 Project navigator 的 `Frameworks` 下，注意选择 `Copy items if needed`；
     3. 添加讯飞依赖的系统库（见：[科大讯飞MSC开发指南-iOS-集成流程](http://doc.xfyun.cn/msc_ios/%E9%9B%86%E6%88%90%E6%B5%81%E7%A8%8B.html)）:
         - CoreLocation.framework
         - CoreTelephony.framework
@@ -53,7 +52,7 @@ yarn add react-native-speech-iflytek
 ## Usage
 （详见 Example）引入包：
 ```
-import { Recognizer, Synthesizer, SpeechConstant } from "react-native-speech-iflytek";
+import { Recognizer, Synthesizer, SpeechConstant } from "react-native-iflytek";
 ```
 语音识别：
 ```
@@ -145,12 +144,12 @@ Synthesizer.setParameter(SpeechConstant.VOICE_NAME, "xiaoyu");
 - (Native Android) Android Studio 2.3.3 接入讯飞语音接口: http://www.jianshu.com/p/caf50402d31c
 
 ## FAQ
-1. iOS 提示 `iflytek.framework not found` ？  （见 [issue 15](https://github.com/zphhhhh/react-native-speech-iflytek/issues/15)）  
-  - 解决方法一（建议）：Xcode 没有找到讯飞库，在项目的 `Building Settings` -> `Search Paths` -> `Framework Search Paths` 中手动添加 `iflytek.framework` 的目录 `$(SRCROOT)/../node_modules/react-native-speech-iflytek/ios/libs`。
+1. iOS 提示 `iflytek.framework not found` ？  （见 [issue 15](https://github.com/duanzjun/react-native-iflytek/issues/15)）  
+  - 解决方法一（建议）：Xcode 没有找到讯飞库，在项目的 `Building Settings` -> `Search Paths` -> `Framework Search Paths` 中手动添加 `iflytek.framework` 的目录 `$(SRCROOT)/../node_modules/react-native-iflytek/ios/libs`。
   - 解决方法二：将 `iflytek.framework` 拖入时注意选择 `Copy items if needed`。如忘记选择，最好的方式是在工程中删除讯飞框架，将讯飞框架移至其他文件夹，并重新拖入工程，选择 `Copy items if needed`。（Xcode 的缓存会记住上次选择，若第一次没有`Copy items if needed`，在同一位置下重新拖入不会再次出现选择框。）
 2. `react-native [command]` 命令失效？  
   同时使用 yarn 和 npm 时可能会出现这个问题，建议再敲一次 `yarn` 命令解决依赖。
 
 ## Contribute
 期待提出有关建议，欢迎做出贡献，感谢 star。  
-Github: [https://github.com/zphhhhh/react-native-speech-iflytek](https://github.com/zphhhhh/react-native-speech-iflytek)
+Github: [https://github.com/duanzjun/react-native-iflytek](https://github.com/duanzjun/react-native-iflytek)
