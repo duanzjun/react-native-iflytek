@@ -1,6 +1,6 @@
 {
-  "name": "react-native-speech-iflytek",
-  "version": "1.0.5",
+  "name": "react-native-iflytek",
+  "version": "1.0.7",
   "description": "Speech module based on iflytekSpeech for react native",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zphhhhh/react-native-speech-iflytek.git"
+    "url": "git+https://github.com/duanzjun/react-native-iflytek.git"
   },
   "keywords": [
     "speech"
@@ -16,8 +16,8 @@
   "author": "zphhhhh",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zphhhhh/react-native-speech-iflytek/issues"
+    "url": "https://github.com/duanzjun/react-native-iflytek/issues"
   },
-  "homepage": "https://github.com/zphhhhh/react-native-speech-iflytek#readme",
+  "homepage": "https://github.com/duanzjun/react-native-iflytek#readme",
   "dependencies": {}
 }

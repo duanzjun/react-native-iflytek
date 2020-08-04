@@ -6,7 +6,7 @@
 
 import React, { Component } from "react";
 import { StyleSheet, View, TextInput, Platform, NativeEventEmitter } from "react-native";
-import { Recognizer, Synthesizer, SpeechConstant } from "react-native-speech-iflytek";
+import { Recognizer, Synthesizer, SpeechConstant } from "react-native-iflytek";
 import Button from "react-native-button";
 
 export default class App extends Component {
